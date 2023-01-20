@@ -1,0 +1,57 @@
+header {
+    background-color: rgb(17, 58, 97);
+    background-image: url(img/Ellipse\ 9.png),linear-gradient(rgb(5, 20, 33), rgb(17, 58, 97));
+    background-repeat: no-repeat no-repeat;
+    background-position: top right;
+}
+
+@media only screen and (max-width: 700px) {
+    header {
+        background-color: rgb(17, 58, 97);
+        background-image: url(img/Ellipse-md.png ), linear-gradient(rgb(5, 20, 33), rgb(17, 58, 97));
+        background-repeat: no-repeat;
+        background-position: top right;
+
+    }
+}
+
+.navbar-brand {
+    font-size: 34px;
+}
+
+.container .animation {
+    position: relative;
+}
+
+.container .animation .img-fluid {
+    position: absolute;
+    animation-name: img;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+    position: relative;
+    width: 95%;
+    overflow: hidden;
+
+}
+
+@keyframes img {
+    0% {
+        
+        right: 95%;
+     
+    }
+
+    50% {
+
+    
+    }
+
+    100% {
+
+        left: 0%;
+        right: 0%;
+       
+    }
+}
