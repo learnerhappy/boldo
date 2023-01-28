@@ -1,6 +1,6 @@
 header {
     background-color: rgb(17, 58, 97);
-    background-image: url(img/Ellipse\ 9.png),linear-gradient(rgb(5, 20, 33), rgb(17, 58, 97));
+    background-image: url(img/home/Ellipse\ 9.png), linear-gradient(rgb(5, 20, 33), rgb(17, 58, 97));
     background-repeat: no-repeat no-repeat;
     background-position: top right;
 }
@@ -8,7 +8,7 @@ header {
 @media only screen and (max-width: 700px) {
     header {
         background-color: rgb(17, 58, 97);
-        background-image: url(img/Ellipse-md.png ), linear-gradient(rgb(5, 20, 33), rgb(17, 58, 97));
+        background-image: url(img/home/Ellipse-md.png ), linear-gradient(rgb(5, 20, 33), rgb(17, 58, 97));
         background-repeat: no-repeat;
         background-position: top right;
 
@@ -19,11 +19,12 @@ header {
     font-size: 34px;
 }
 
-.container .animation {
+/* .container 
+.animation { 
     position: relative;
 }
 
-.container .animation .img-fluid {
+ .container .animation .img-fluid {
     position: absolute;
     animation-name: img;
     animation-duration: 2s;
@@ -33,25 +34,97 @@ header {
     position: relative;
     width: 95%;
     overflow: hidden;
-
 }
 
 @keyframes img {
-    0% {
-        
-        right: 95%;
+    0% {   right: 95%;
      
     }
-
-    50% {
-
-    
-    }
-
     100% {
-
-        left: 0%;
+       left: 0%;
         right: 0%;
        
     }
+} */
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250 * 7));
+    }
+}
+
+.slider {
+    height: 100px;
+    width: auto;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider .slide-track {
+    animation: scroll 30s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.slider .slide {
+    width: 100px;
+    width: 250px;
+}
+
+/* card section */
+.card a::after {
+    display: block;
+    content: "";
+    height: .1rem;
+    background: black;
+    width: 8rem;
+    margin-top: .5rem;
+}
+
+/* offer section */
+.offer img {
+    width: 100%;
+    height: 715px;
+}
+
+.offer a:nth-child(2):hover,
+.offer a:last-child:hover {
+    background-color: #212529;
+    color: #fff;
+}
+
+/* slide-section */
+.slide-section{
+    background-color: rgb(5, 20, 33);
+}
+
+.blog-btn{
+    text-align: center;
+    justify-content: center;
+
+}
+.blog-btn .btn{
+    border: 2px solid black;
+    color: black;
+
+}
+
+/* form section */
+.login{
+    background-color: rgb(17, 58, 97);
+    background-image: url(img/home/Ellipse\ 9.png), linear-gradient(rgb(5, 20, 33), rgb(17, 58, 97));
+    background-repeat: no-repeat no-repeat;
+    background-position: top right;
+}
+input::placeholder{
+    color: black;
+}
+/* footer section */
+.boldo{
+    color: rgb(5, 20, 33);
 }
